@@ -7,6 +7,7 @@ Example:
     $ python app.py
 """
 import sys
+from tkinter.messagebox import YES
 import fire
 import questionary
 from pathlib import Path
@@ -109,8 +110,9 @@ def save_qualifying_loans(qualifying_loans):
         qualifying_loans (list of lists): The qualifying bank loans.
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
-    questionary.confirm("Would you like to save your qualifying loans?").ask()
-
+    save_csv = questionary.confirm("Would you like to save your qualifying loans?").ask()
+    
+    
 
 def run():
     """The main function for running the script."""
