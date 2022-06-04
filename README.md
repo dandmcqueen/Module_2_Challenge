@@ -44,19 +44,19 @@ The file path for the rate sheet is - <span style="color:orange">data/daily_rate
 
 >After providing the required loan information, the CLI will ask if the results are to be saved.
 
-![](images/image_1.jpg)
+![](images/image_1.JPG)
 
 
 >Once the user selects yes(Y) the file path and name can be determined.
 
 >The user is then given confirmation that the file was saved
 
-![](images/image_2.jpg)
+![](images/image_2.JPG)
 
 
 >The ls command will show the new file in the proper directory
 
-![](images/image_3.jpg)
+![](images/image_3.JPG)
 
 This section should include screenshots, code blocks, or animations explaining how to use your project.
 
