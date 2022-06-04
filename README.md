@@ -11,10 +11,10 @@ With loan information saved, users can adjust the entered income, credit scores,
 
 This project uses Python 3.9.7 and the following libraries
 
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
+
+
+| sys     | fire       | questionary | csv |
+
 
 
 Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
