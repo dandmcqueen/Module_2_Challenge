@@ -6,7 +6,6 @@ This is a command line application to match applicants with qualifying loans.
 Example:
     $ python app.py
 """
-import csv
 import sys
 from tkinter.messagebox import YES
 import fire
@@ -113,11 +112,12 @@ def save_qualifying_loans(qualifying_loans):
     # @TODO: Complete the usability dialog for savings the CSV Files.
     save_loans = questionary.confirm("Would you like to save your qualifying loans?").ask()
     if save_loans == True:
-        output_path = questionary.text("Please specify the output file path.").ask()
-        output_path = Path(output_path)     
+        output_path = questionary.text("Please specify the output file path (.csv)").ask()
+        output_path = Path(output_path)
+        print(f"file saved to: {output_path}")
     else:
-        sys.exit(f"Cannot find path:{output_path}")
-    
+        sys.exit("Good-bye")
+  
     save_csv(output_path, qualifying_loans)
 
 def run():
