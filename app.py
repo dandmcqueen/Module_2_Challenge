@@ -6,13 +6,14 @@ This is a command line application to match applicants with qualifying loans.
 Example:
     $ python app.py
 """
+import csv
 import sys
 from tkinter.messagebox import YES
 import fire
 import questionary
 from pathlib import Path
 
-from qualifier.utils.fileio import load_csv
+from qualifier.utils.fileio import load_csv, save_csv
 
 from qualifier.utils.calculators import (
     calculate_monthly_debt_ratio,
@@ -112,9 +113,12 @@ def save_qualifying_loans(qualifying_loans):
     # @TODO: Complete the usability dialog for savings the CSV Files.
     save_loans = questionary.confirm("Would you like to save your qualifying loans?").ask()
     if save_loans == True:
-        csvpath = questionary.text("Please specify the output file path.").ask()
-        save_csv = csvpath
-        print(save_csv)
+        output_path = questionary.text("Please specify the output file path.").ask()
+        output_path = Path(output_path)     
+    else:
+        sys.exit(f"Cannot find path:{output_path}")
+    
+    save_csv(output_path, qualifying_loans)
 
 def run():
     """The main function for running the script."""
@@ -133,6 +137,9 @@ def run():
     # Save qualifying loans
     save_qualifying_loans(qualifying_loans)
 
+    
+
+    
 
 if __name__ == "__main__":
     fire.Fire(run)
