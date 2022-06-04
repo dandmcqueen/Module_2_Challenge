@@ -1,10 +1,21 @@
-# Project Title
+# Module 2 Challenge
 
-Just after the title, introduce your project by describing attractively what the project is about and what is the main problem that inspires you to create this project or what is the main contribution for the potential user of your project.
+In this project, the active CLI has been updated to give users the ability to save their qualified loans to a .csv file. 
+Users are now able to decide on the file name and which directory they wish to save to.
+
+With loan information saved, users can adjust the entered income, credit scores, ect. and compare the qualified loan results with other past results.
 
 ---
 
 ## Technologies
+
+This project uses Python 3.9.7 and the following libraries
+
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+
 
 Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
 
