@@ -29,7 +29,7 @@ def load_csv(csvpath):
             data.append(row)
     return data
 
-    
+# Save applicant loan data to specified output path
 def save_csv(output_path, data, header=None):
     with open(output_path, "w", newline="") as csvfile:
         csvwriter = csv.writer(csvfile, delimiter=',')
